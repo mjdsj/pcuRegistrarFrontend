@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accounts</title>
+    <!-- Styles -->
+
+    <!-- Remote -->
+    <!-- CSS only -->
+    <link href="Dashboard_files/bootstrap.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!-- Internal -->
+    <style> 
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+
+      @media (max-width: 767px) {
+        .hidden-mobile {
+          display: none;
+        }
+      }
+
+      @media (min-width: 767px) {
+        .hidden-desktop {
+          display: none;
+        }
+      }
+
+      .bg-main{
+       background-color: rgb(172, 157, 138);
+       }
+
+      .bg-button-main{
+       background-color: rgb(0, 7, 104);
+       }
+
+      .bg-button-accounting{
+       background-color: rgb(255, 251, 0);
+       }
+      .bg-button-registrar{
+       background-color: rgb(0, 16, 305);
+       }
+
+      
+    </style>
+    <!-- External -->
+    <link rel="stylesheet" href="Dashboard_files/sidebars.css">
+</head>
+<body>
+    <main class="app">
+        <sidebar class="hidden-mobile">
+            <div class="flex-shrink-0 sm m-2 p-3 bg-light shadow-sm rounded" style="width: fit-content; height: 97vh; overflow:auto; z-index: 1;">
+              <img src="./img/cf3624c5.png" class="mx-auto d-block my-3" alt="" srcset="" style="height: 85px; width: 85px;">
+                <a href="#" class="d-flex align-items-center pb-3 mb-3 link-dark text-decoration-none border-bottom">
+                  <span class="fs-5 fw-semibold text-center">Philippine Christian University</span>
+                </a>
+                <ul class="list-unstyled ps-0">
+                  <li class="mb-1">
+                    <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#home-collapse" aria-expanded="false">
+                      Home
+                    </button>
+                    <div class="collapse" id="home-collapse">
+                      <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                        <li><a href="#" class="link-dark rounded">Overview</a></li>
+                        <li><a href="#" class="link-dark rounded">Updates</a></li>
+                        <li><a href="#" class="link-dark rounded">Reports</a></li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li class="mb-1">
+                    <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#dashboard-collapse" aria-expanded="false">
+                      Dashboard
+                    </button>
+                    <div class="collapse" id="dashboard-collapse">
+                      <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                        <li><a href="#" class="link-dark rounded">Overview</a></li>
+                        <li><a href="#" class="link-dark rounded">Weekly</a></li>
+                        <li><a href="#" class="link-dark rounded">Monthly</a></li>
+                        <li><a href="#" class="link-dark rounded">Annually</a></li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li class="mb-1">
+                    <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#orders-collapse" aria-expanded="false">
+                      Orders
+                    </button>
+                    <div class="collapse" id="orders-collapse">
+                      <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                        <li><a href="#" class="link-dark rounded">New</a></li>
+                        <li><a href="#" class="link-dark rounded">Processed</a></li>
+                        <li><a href="#" class="link-dark rounded">Shipped</a></li>
+                        <li><a href="#" class="link-dark rounded">Returned</a></li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li class="border-top my-3"></li>
+                  <li class="mb-1">
+                    <button class="btn btn-toggle align-items-center rounded" data-bs-toggle="collapse" data-bs-target="#account-collapse" aria-expanded="true">
+                      Account Management
+                    </button>
+                    <div class="collapse show" id="account-collapse">
+                      <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                        <li><a href="#" class="link-dark rounded">New...</a></li>
+                        <li><a href="#" class="link-dark rounded">Profile</a></li>
+                        <li><a href="#" class="link-dark rounded">Settings</a></li>
+                        <li><a href="#" class="link-dark rounded">Sign out</a></li>
+                      </ul>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+        </sidebar>
+        <div class="container-fluid mx-2 my-2" style="overflow:auto; z-index: 0;">
+            <header class="bg-light rounded shadow-sm p-3">
+              <div class="container-fluid hidden-desktop" style="width: fit-content;">
+                <a href="#" rel="noopener noreferrer">
+                  <img src="./img/cf3624c5.png" class="mx-auto d-block my-3" style="height: 50px; width: 50px;">
+                </a>
+                <span class="text-center text-black">Philippine Christian University</span>
+              </div>
+              <ul class="nav justify-content-center">
+              <!-- Dropdown Messages-->
+              <div class="nav-item dropdown">
+                <a class="nav-link btn text-black mx-2" href="#" role="button" id="MessagesMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16" alt="hello">
+                    <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"/>
+                  </svg>
+                </a>
+              
+                <ul class="dropdown-menu" aria-labelledby="MessagesMenuLink">
+                  <li class="p-2">
+                    <ol class="list-group list-group-numbered">
+                      <li class="list-group-item d-flex justify-content-between align-items-start">
+                        <div class="ms-2 me-auto">
+                          <div class="fw-bold">Subheading</div>
+                          Content for list item
+                        </div>
+                        <span class="badge bg-primary rounded-pill">14</span>
+                      </li>
+                      <li class="list-group-item d-flex justify-content-between align-items-start">
+                        <div class="ms-2 me-auto">
+                          <div class="fw-bold">Subheading</div>
+                          Content for list item
+                        </div>
+                        <span class="badge bg-primary rounded-pill">14</span>
+                      </li>
+                      <li class="list-group-item d-flex justify-content-between align-items-start">
+                        <div class="ms-2 me-auto">
+                          <div class="fw-bold">Subheading</div>
+                          Content for list item
+                        </div>
+                        <span class="badge bg-primary rounded-pill">14</span>
+                      </li>
+                    </ol>
+                  </li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#"><strong>Go to Message page</strong></a></li>
+                </ul>
+              </div>
+              <!-- Dropdown Messages End -->
+              <!-- Dropdown Notification-->
+              <div class="nav-item dropdown">
+                <a class="nav-link btn text-black mx-2" href="#" role="button" id="NotificationMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-app-indicator" viewBox="0 0 16 16">
+                    <path d="M5.5 2A3.5 3.5 0 0 0 2 5.5v5A3.5 3.5 0 0 0 5.5 14h5a3.5 3.5 0 0 0 3.5-3.5V8a.5.5 0 0 1 1 0v2.5a4.5 4.5 0 0 1-4.5 4.5h-5A4.5 4.5 0 0 1 1 10.5v-5A4.5 4.5 0 0 1 5.5 1H8a.5.5 0 0 1 0 1H5.5z"/>
+                    <path d="M16 3a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+                  </svg>
+                </a>
+              
+                <ul class="dropdown-menu" aria-labelledby="NotificationMenuLink">
+                  <li class="p-2">
+                    <ol class="list-group list-group-numbered">
+                      <li class="list-group-item d-flex justify-content-between align-items-start">
+                        <div class="ms-2 me-auto">
+                          <div class="fw-bold">Subheading</div>
+                          Content for list item
+                        </div>
+                        <span class="badge bg-primary rounded-pill">14</span>
+                      </li>
+                      <li class="list-group-item d-flex justify-content-between align-items-start">
+                        <div class="ms-2 me-auto">
+                          <div class="fw-bold">Subheading</div>
+                          Content for list item
+                        </div>
+                        <span class="badge bg-primary rounded-pill">14</span>
+                      </li>
+                      <li class="list-group-item d-flex justify-content-between align-items-start">
+                        <div class="ms-2 me-auto">
+                          <div class="fw-bold">Subheading</div>
+                          Content for list item
+                        </div>
+                        <span class="badge bg-primary rounded-pill">14</span>
+                      </li>
+                    </ol>
+                  </li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#"><strong>See Notification in full view</strong></a></li>
+                </ul>
+              </div>
+              <!-- Dropdown Notification End -->
+              <!-- Dropdown Account-->
+              <div class="nav-item dropdown">
+                <a class="nav-link btn text-black mx-2" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
+                    <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                  </svg>
+                </a>
+              
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                  <li><a class="dropdown-item disabled text-black" href="#">Welcome, {{$user}}</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Settings</a></li>
+                  <li><a class="dropdown-item" href="#">Profile</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Log Out</a></li>
+                </ul>
+              </div>
+              <!-- Dropdown Account End -->
+              </ul>
+            </header>
+            <topnav class="hidden-desktop">
+              <nav class="nav bg-light justify-content-center py-2">
+                <a class="nav-link text-dark" href="#">Home</a>
+                <a class="nav-link text-dark" href="#">Dashboard</a>
+                <a class="nav-link text-dark" href="#">Orders</a>
+                <a class="nav-link text-dark" href="#">Account Management</a>
+              </nav>
+            </topnav>
+            <!-- Breadcrumb -->
+            <div class="mt-4 mx-2">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item active"><a href="#"></a>Account Management</li>
+              </ol>
+            </div>
+            <!-- @layouts goes here . . . -->
+            <div class="row text-light my-2">
+            <div class="col my-2">
+                <div class="card text-dark border-0"  style="height: 100%;">
+                    <div class="card-body">
+                        <h4 class="card-title">Users:</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    <!-- Bootstrap with Popper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+
+    <!-- External -->
+        <script src="Dashboard_files/sidebars.js"></script>
+        <!-- Charts -->
+        <script src="./charts/sample.js"></script>
+        <script src="./charts/sample2.js"></script>
+    <!-- Internal -->
+    <script>
+
+    </script>
+
+<!-- Code injected by live-server -->
+</body>
+</html>
